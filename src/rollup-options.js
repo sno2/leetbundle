@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
       ts({
         tsconfigDefaults: {
-          exclude: ["dist", "node_modules", "isomorphic-fetch"],
+          exclude: ["dist", "node_modules"],
           include: ["src/**/*.ts"],
           compilerOptions: {
             declaration: true,
@@ -31,13 +31,19 @@ module.exports = {
       }),
       bundleSizePlugin(),
       terser(),
+      sourcemaps(),
       babel({
         babelHelpers: "runtime",
+        exclude: ["node_modules/**"],
+        extensions: [".ts"],
         presets: ["@babel/preset-env"],
-        sourceMaps: "both",
-        inputSourceMap: true,
+        plugins: [
+          [
+            "@babel/plugin-transform-runtime",
+            { corejs: 3, babelHelpers: true },
+          ],
+        ],
       }),
-      sourcemaps(),
     ],
   },
   outputOptions: [

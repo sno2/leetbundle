@@ -1,1 +1,1 @@
-export const foo = "asdf";
+export function* foo() {}
