@@ -4,8 +4,6 @@ const ts = require("rollup-plugin-typescript2");
 const bundleSizePlugin = require("rollup-plugin-bundle-size");
 const { terser } = require("rollup-plugin-terser");
 const { babel } = require("@rollup/plugin-babel");
-const resolve = require("rollup-plugin-node-resolve");
-const commonjs = require("@rollup/plugin-commonjs");
 const sourcemaps = require("rollup-plugin-sourcemaps");
 
 module.exports = {
@@ -40,8 +38,6 @@ module.exports = {
         inputSourceMap: true,
       }),
       sourcemaps(),
-      resolve(),
-      commonjs(),
     ],
   },
   outputOptions: [
