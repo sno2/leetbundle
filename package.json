@@ -3,7 +3,7 @@
   "version": "0.0.1-alpha.3",
   "description": "An easier way to make TypeScript libraries.",
   "main": "src/index.js",
-  "bin": "src/index.js",
+  "bin": "src/cli.js",
   "author": "Carter Snook <cartersnook04@gmail.com>",
   "license": "MIT",
   "dependencies": {
