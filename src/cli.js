@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const sade = require("sade");
 
 const prog = sade("leetbundle");
