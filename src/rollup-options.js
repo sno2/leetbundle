@@ -15,7 +15,7 @@ module.exports = {
       ts({
         tsconfigDefaults: {
           exclude: ["dist", "node_modules", "isomorphic-fetch"],
-          include: "src/**/*.ts",
+          include: ["src/**/*.ts"],
           compilerOptions: {
             declaration: true,
             declarationDir: config.typesDir ?? "dist/types",
