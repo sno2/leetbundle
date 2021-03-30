@@ -1,6 +1,6 @@
 {
   "name": "leetbundle",
-  "version": "0.0.1-alpha.5",
+  "version": "0.0.1-alpha.6",
   "description": "An easier way to make TypeScript libraries.",
   "main": "src/index.js",
   "bin": "src/cli.js",
